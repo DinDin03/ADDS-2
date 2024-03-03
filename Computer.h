@@ -8,6 +8,7 @@ class Computer : public Player{
     public:
         char makeMove() override;
         string getName() override;
+        
 };
 
-#endif COMPUTER_H
+#endif

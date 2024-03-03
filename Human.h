@@ -8,10 +8,10 @@ class Human : public Player{
     private:
         string name;
     public:
-        Human(string &name);
+        Human(const string& name = "Human");
         char makeMove() override;
         string getName() override;
 
 };
 
-#endif HUMAN_H
+#endif

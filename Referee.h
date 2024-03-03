@@ -11,4 +11,4 @@ class Referee{
 };
 
 
-#endif REFEREE_H
+#endif
