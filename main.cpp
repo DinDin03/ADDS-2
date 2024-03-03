@@ -12,15 +12,16 @@ int main(){
     Computer computer;
     Referee ref;
 
-    human.getName();
-    human.makeMove(); //human makes the first move
-
-    Player* winner = ref.refGame(&human,&computer);\
+    string name = human.getName();
+    Player* winner = ref.refGame(&human,&computer);
     if(winner == nullptr){
         cout <<"It's a Tie" << endl;
     }
-    else {
-        cout << winner->getName() << " Wins" << endl;
+    else if (winner == &human) {
+        cout << name << " Wins" << endl;
+    }
+    else if (winner == &computer) {
+        cout << "Computer Wins" << endl;
     }
 
 

@@ -5,15 +5,16 @@ using namespace std;
 
 Referee::Referee(){}
 
-Player* Referee::refGame(Player * player1, Player * player2){
-    if(player1->makeMove()=='R'){
-        return nullptr;
-    }   
-    else if(player1->makeMove()=='P'){
+Player* Referee::refGame(Player* player1, Player* player2) {
+    char move1 = player1->makeMove();
+    char move2 = 'R';
+
+    if (move1 == move2) {
+        return nullptr; 
+    } else if (move1 == 'P') { 
         return player1;
-    }
-    else if(player1->makeMove()=='S'){
-        return player2;
+    } else if (move1 == 'S') { 
+        return player2; 
     }
     return nullptr;
 }
